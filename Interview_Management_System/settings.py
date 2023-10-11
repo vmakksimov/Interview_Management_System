@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     "corsheaders",
     'Interview_Management_System.api_users',
+    'Interview_Management_System.interview',
 
 ]
 

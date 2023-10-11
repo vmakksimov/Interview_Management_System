@@ -193,7 +193,9 @@ export const Register = () => {
                 navigate('/')
             })
 
-            .catch(() => {
+            .catch((error) => {
+                console.log('some error')
+                console.log(error)
                 navigate('/')
             })
     }
