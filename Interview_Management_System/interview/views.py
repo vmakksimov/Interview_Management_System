@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from rest_framework import generics, status
 
 from Interview_Management_System.interview.models import Interview
 from Interview_Management_System.interview.serializers import InterviewSerializer
@@ -10,11 +11,6 @@ from Interview_Management_System.interview.serializers import InterviewSerialize
 class CreateInterviewView(APIView):
     queryset = Interview.objects.all()
     serializer_class = InterviewSerializer
-    # permission_classes = (AllowAny,)
-    # parser_classes = [MultiPartParser, JSONParser, FormParser]
-
-    # def pre_save(self, obj):
-    #     obj.image = self.request.FILES.get('file')
 
     def get(self, request, *args, **kwargs):
         posts = Interview.objects.all()
@@ -28,3 +24,22 @@ class CreateInterviewView(APIView):
             return Response({'status': 'ok'}, status=200)
         else:
             return Response({'error': serializer_class.errors}, status=400)
+
+
+class InterviewUpdateView(generics.UpdateAPIView):
+    queryset = Interview.objects.all()
+    serializer_class = InterviewSerializer
+
+    def get(self, request, pk):
+        interview = Interview.objects.get(id=pk)
+        serializer = InterviewSerializer(interview)
+        return Response(serializer.data)
+
+    def delete(self, request, pk):
+        interview = Interview.objects.get(id=pk)
+        interview.delete()
+        return Response(status=status.HTTP_200_OK)
+
+class InterviewList(generics.ListAPIView):
+    queryset = Interview.objects.all()
+    serializer_class = InterviewSerializer

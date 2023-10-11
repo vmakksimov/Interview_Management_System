@@ -55,14 +55,7 @@ export const CreateInterview = () => {
                             <input type="date" name="date_for_interview" placeholder="Enter date" required />
 
                         </div>
-                        <div className="input-box">
-                            <span className="details">Gender</span>
-                            <select name="gender">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                             
-                            </select>
-                        </div>
+                        
                         <div className="input-box">
                            
                             <input type="text" name="email" placeholder="Enter Email" required />
@@ -72,6 +65,23 @@ export const CreateInterview = () => {
                             
                             <input type="number" name="mobile_number" placeholder="Enter mobile number" required />
 
+                        </div>
+                        <div className="input-box">
+                            <span className="details">Status</span>
+                            <select name="status">
+                                <option value="Pending">Pending</option>
+                                <option value="Approved">Approved</option>
+                                <option value="Rejected">Rejected</option>
+                            </select>
+                        </div>
+
+                        <div className="input-box">
+                            <span className="details">Gender</span>
+                            <select name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                             
+                            </select>
                         </div>
                         
                         {/* <div className="input-box">

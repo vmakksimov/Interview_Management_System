@@ -12,6 +12,10 @@ class Interview(models.Model):
     MALE = 'Male'
     FEMALE = 'Female'
     DO_NOT_SHOW = 'Do not show'
+    PENDING = 'Pending'
+    APPROVED = 'Approved'
+    REJECTED = 'Rejected'
+    STATUS = [(x, x) for x in (PENDING, APPROVED, REJECTED, DO_NOT_SHOW)]
     GENDERS = [(x, x) for x in (MALE, FEMALE, DO_NOT_SHOW)]
 
     candidate_first_name = models.CharField(max_length=10,
@@ -35,12 +39,6 @@ class Interview(models.Model):
 
     )
 
-    gender = models.CharField(
-        max_length= max(len(x) for x, _ in GENDERS),
-        choices= GENDERS,
-        default= DO_NOT_SHOW,
-    )
-
     email = models.EmailField(
         null=True,
         blank=True,
@@ -52,6 +50,18 @@ class Interview(models.Model):
             validate_if_number_starts_with_country_code,
             MinLengthValidator(10, message='The number is incorrect.')
         )
+    )
+
+    gender = models.CharField(
+        max_length=max(len(x) for x, _ in GENDERS),
+        choices=GENDERS,
+        default=DO_NOT_SHOW,
+    )
+
+    status = models.CharField(
+        max_length=max(len(x) for x, _ in STATUS),
+        choices=STATUS,
+        default=DO_NOT_SHOW,
     )
 
     is_staff = models.BooleanField(default=False)
