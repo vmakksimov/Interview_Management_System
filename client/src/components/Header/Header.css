@@ -1,0 +1,88 @@
+.header-nav {
+    position: sticky;
+    display: flex;
+    justify-content: space-around;
+    border: 0px solid black;
+    box-shadow: 1px 4px 20px 0px;
+    background-color: #f3d7ad;
+}
+
+.header-elements {
+    display: flex;
+    list-style-type: none;
+}
+
+.header-elements li, .logo {
+    margin: 5px;
+    border: 0px;
+    border-radius: 8px;
+    padding: 11px;
+    box-shadow: 0px 3px 8px 1px #1f1f1e;
+    background: #8b6149;
+    color: white;
+}
+
+.header-elements li a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-buttons:hover{
+   background-color: coral;
+    cursor: pointer;
+    box-shadow: 0px 3px 13px 2px white;
+}
+
+.greeting-span {
+    position: relative;
+    left: 15%;
+    top: 20%;
+    font-size: 24px;
+}
+
+.header-elements li:nth-child(4){
+    position: relative;
+   
+}
+
+.button-book input {
+    border-radius: 6px;
+    padding: 8px 37px;
+    background: #8b6149;
+    color: white;
+    cursor: pointer;
+    margin: 20px
+    
+}
+
+.button-book input:hover{
+    box-shadow: 1px 1px 16px 0px black;
+}
+
+.container-register {
+    border: 0px solid black;
+    margin: 150px auto;
+    width: 64%;
+    border-radius: 14px;
+    box-shadow: 0px 0px 15px 2px black;
+    background: antiquewhite;
+}
+
+.btn.dropdown-toggle, .dropdown-menu.show {
+    background-color: transparent;
+    border: 0px
+}
+
+.dropdown-item:hover{
+    background-color: transparent;
+}
+
+.dropdown-menu.show li:hover{
+    box-shadow: 0px 0px 12px 2px white;
+}
+
+.badge {
+    margin-top: 20px;
+    margin-left: 150px;
+    cursor: pointer;
+}

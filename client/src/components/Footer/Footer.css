@@ -1,0 +1,10 @@
+.daycare-footer {
+    background-color: #f3d7ad;
+    display: flex;
+    justify-content: space-around;
+}
+
+.daycare-footer ul {
+    display: flex;
+    list-style-type: none;
+}

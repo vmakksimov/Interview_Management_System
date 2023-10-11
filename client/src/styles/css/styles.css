@@ -1,0 +1,22 @@
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Grechen+Fuemen&family=Inter:wght@200;300;500&family=Lato:wght@300&family=Montserrat+Subrayada&family=Montserrat:wght@300;400&family=Moon+Dance&family=Open+Sans:wght@300;400;800&family=PT+Sans&family=Pacifico&family=Poppins:wght@100;600&family=Raleway:ital,wght@0,100;0,400;0,500;1,400&family=Roboto:wght@100;300;400&display=swap');
+
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+.App {
+    font-family: 'Abril Fatface', cursive;
+}
+
+
+
+
+
