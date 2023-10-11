@@ -10,8 +10,8 @@ def only_letters_validator(value):
 def validate_if_number_starts_with_country_code(value):
     country_code = value[0]
     number = value[1:]
-    if not country_code == '+':
-        raise ValidationError('You number must start with your country code including "+" in front.')
+    if country_code == 0:
+        raise ValidationError('You number must start with your country code in front.')
     for char in number:
         if not char.isdigit():
             raise ValidationError('You must input only digits.')

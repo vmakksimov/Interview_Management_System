@@ -19,6 +19,7 @@ export const Header = () => {
                     && <>
                         {/* <li className='header-buttons'><Link to='/mypets'>My Meetings</Link></li>
                         <li className='header-buttons'><Link to='/create-pet'>Add Interview</Link></li> */}
+                        <li className='header-buttons'><Link to='/create-interview'>Add Interview</Link></li>
                         <li className='header-buttons'><Link to='/logout'>Logout</Link></li>
 
 

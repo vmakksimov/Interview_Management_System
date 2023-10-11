@@ -13,55 +13,57 @@ import { useLocalStorage } from './hooks/useLocalStorage';
 import { AuthContext } from './components/context/AuthContext';
 import { DataContext } from './components/context/DataContext';
 import { Logout } from './components/Logout/Logout';
+import { CreateInterview } from './components/CreateInterview/CreateInterview';
 
 function App() {
   const [user, setAuth] = useLocalStorage('auth', {})
-	// const [pets, setPet] = useState([])
-	const [itemCount, setItemCount] = useState(1);
+  const [interviews, setInterview] = useState([])
+  const [itemCount, setItemCount] = useState(1);
 
-	const userLogin = (authData) => {
-		setAuth(authData)
-	}
+  const userLogin = (authData) => {
+    setAuth(authData)
+  }
 
-	const userLogout = () => {
-		setAuth({})
-	}
+  const userLogout = () => {
+    setAuth({})
+  }
 
-	// const addPetHandler = (petData) => {
-	// 	setPet(state => [
-	// 		...state,
-	// 		petData
-	// 	])
-	// }
+  const addInterviewHandler = (interviewData) => {
+    setInterview(state => [
+      ...state,
+      interviewData
+    ])
+  }
 
 
-	// useEffect(() => {
-	// 	petsService.getPets()
-	// 		.then(res => setPet(Object.values(res)))
+  // useEffect(() => {
+  // 	petsService.getPets()
+  // 		.then(res => setPet(Object.values(res)))
 
-	// }, [])
+  // }, [])
 
-	return (
-		<AuthContext.Provider value={{ user, itemCount, userLogin, userLogout, setItemCount }}>
-			<div className="App">
-				<Header />
-				<DataContext.Provider >
-					<div className='main-app'>
-						<Routes>
-							<Route path='/' element={<Home />} />
-							<Route path='/register' element={<Register />} />
-							<Route path='/login' element={<Login />} />
-							<Route path='/logout' element={<Logout />} />
-							{/* <Route path='/mypets' element={<MyPets />} />
+  return (
+    <AuthContext.Provider value={{ user, itemCount, userLogin, userLogout, setItemCount }}>
+      <div className="App">
+        <Header />
+        <DataContext.Provider value={{ interviews, setInterview, addInterviewHandler }}>
+          <div className='main-app'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/register' element={<Register />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/logout' element={<Logout />} />
+              <Route path='/create-interview' element={<CreateInterview />} />
+              {/* <Route path='/mypets' element={<MyPets />} />
 							<Route path='/create-pet' element={<CreatePet />} /> */}
-					
-						</Routes>
-					</div>
-				</DataContext.Provider>
-				<Footer />
-			</div>
-		</AuthContext.Provider>
-	);
+
+            </Routes>
+          </div>
+        </DataContext.Provider>
+        <Footer />
+      </div>
+    </AuthContext.Provider>
+  );
 }
 
 

@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b71b45b8-36df-4bec-8115-ac1b3bebe640" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/migrations/0002_auto_20231011_1740.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/migrations/0003_delete_interview.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0002_remove_interview_date_for_interview.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0003_interview_candidate_first_name_and_more.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae8e5722-1f5e-487f-9e9a-ec2dcbb4e32a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae8e5722-1f5e-487f-9e9a-ec2dcbb4e32a.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae8e5722-1f5e-487f-9e9a-ec2dcbb4e32a/storage_v2/_src_/database/interview_db._KPBrw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae8e5722-1f5e-487f-9e9a-ec2dcbb4e32a/storage_v2/_src_/database/interview_db._KPBrw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interview_Management_System/common/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/common/validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interview_Management_System/interview/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/interview/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Register/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/authService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/authService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/userService.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/userService.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +98,7 @@
       <updated>1696944626973</updated>
       <workItem from="1696944631154" duration="18965000" />
       <workItem from="1697025365472" duration="1894000" />
-      <workItem from="1697027488168" duration="6817000" />
+      <workItem from="1697027488168" duration="9998000" />
     </task>
     <servers />
   </component>

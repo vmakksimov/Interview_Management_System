@@ -87,14 +87,6 @@ export const Register = () => {
 
     const validationHandler = (e) => {
         e.preventDefault();
-        // const data = Object.fromEntries(new FormData(e.target))
-        // console.log(data.username)
-        console.log(e.target)
-
-        // if (values.checkbox !== 'on') {
-        //     setError({
-        //         [e.target.name]: values[e.target.name]
-        //     })
         UserService.getUsers()
             .then(res => {
                 let currentUser = res.find(x => x.username === e.target.value)
