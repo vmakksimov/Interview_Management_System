@@ -1,17 +1,19 @@
-import { useContext, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useContext, useState} from 'react';
+import { useNavigate, useParams  } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
-import './CreateInterview.css'
+import './EditInterview.css'
 import axios from 'axios'
 import { DataContext } from '../context/DataContext';
 
-export const CreateInterview = () => {
+export const EditInterview = () => {
 
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
     const {interviews} = useContext(DataContext);
-    const { interview , addInterviewHandler } = useContext(DataContext);
-    console.log(interviews)
+    const { interview , addInterviewHandler, editInterviewHandler } = useContext(DataContext);
+    const { interviewId } = useParams();
+    
+    console.log(interviewId)
 
     const onSubmit = (e) => {
         e.preventDefault();
@@ -21,15 +23,15 @@ export const CreateInterview = () => {
         console.log(interviewData)
 
 
-        let url = 'http://127.0.0.1:8000/interview/create/';
-        axios.post(url, interviewData, {
+        let url = `http://127.0.0.1:8000/interview/update/${interviewId}`;
+        axios.put(url, interviewData, {
             headers: {
                 'Content-Type': 'application/json'
             }
         })
             .then(res => {
                 console.log(res)
-                addInterviewHandler(res)
+                editInterviewHandler(interviewId, res.data)
                 navigate('/')
             })
             .catch(err => console.log(err))
@@ -38,7 +40,7 @@ export const CreateInterview = () => {
     }
     return (
         <div className="container-register">
-            <div className="title sign">Enter your candidate details below</div>
+            <div className="title sign">Edit your candidate details below</div>
             <div className="content">
                 <form onSubmit={onSubmit}>
                     <div className="game-details">
