@@ -2,16 +2,18 @@ import './Interview.css'
 import axios from 'axios'
 import { useContext } from "react"
 import { DataContext } from '../../context/DataContext'
+import { AuthContext } from '../../context/AuthContext'
 
 import { useNavigate, useParams } from "react-router-dom"
 
 export const Interview = ({ interview }) => {
-
+    const { user } = useContext(AuthContext)
     const navigate = useNavigate();
     const {interviewId} = useParams()
     const { deleteHandler } = useContext(DataContext);
 
     console.log(interviewId)
+    console.log(user)
 
 
     const onInterviewClick = () => {
@@ -25,9 +27,12 @@ export const Interview = ({ interview }) => {
             let url = `http://127.0.0.1:8000/interview/update/${interview.id}`;
             axios.delete(url, {
                 headers: {
+               
                     'Content-Type': 'application/json'
-                }
+                },
+                body: JSON.stringify(user.accessToken)
             })
+            .catch(err => console.log(err))
             deleteHandler(interviewId)
             navigate('/')
         }

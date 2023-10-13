@@ -1,3 +1,5 @@
+
+
 export const request = async (method, url, data) => {
     try {
 
@@ -5,6 +7,7 @@ export const request = async (method, url, data) => {
         const auth = JSON.parse(user || '{}')
 
         let headers = {}
+        console.log(auth)
 
         if (auth.accessToken) {
             headers['X-Authorization'] = auth.accessToken;
@@ -18,8 +21,10 @@ export const request = async (method, url, data) => {
         } else {
             buildRequest = fetch(url, {
                 method,
+                withCredentials: true,
                 headers: {
                     ...headers,
+                    'Access-Control-Allow-Origin': '*',
                     'content-type': 'application/json',
                 },
                 body: JSON.stringify(data)
@@ -27,7 +32,7 @@ export const request = async (method, url, data) => {
         }
 
         const response = await buildRequest;
-        console.log(response)
+     
       
         const result = await response.json()
 

@@ -1,4 +1,9 @@
+from django.contrib.auth import authenticate
+from django.contrib.auth.models import User
 from django.shortcuts import render
+from rest_framework.authentication import BasicAuthentication, SessionAuthentication
+from rest_framework.authtoken.views import ObtainAuthToken
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import generics, status
@@ -26,14 +31,17 @@ class CreateInterviewView(APIView):
             return Response({'error': serializer_class.errors}, status=400)
 
 
-class InterviewUpdateView(generics.UpdateAPIView):
+class InterviewUpdateView (APIView):
     queryset = Interview.objects.all()
     serializer_class = InterviewSerializer
+    # authentication_classes = [SessionAuthentication, BasicAuthentication]
+    # permission_classes = [IsAuthenticated]
 
     def get(self, request, pk):
         interview = Interview.objects.get(id=pk)
         serializer = InterviewSerializer(interview)
         return Response(serializer.data)
+
 
     def delete(self, request, pk):
         interview = Interview.objects.get(id=pk)

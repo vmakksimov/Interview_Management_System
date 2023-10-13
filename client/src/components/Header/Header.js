@@ -6,6 +6,7 @@ import { AuthContext } from '../context/AuthContext'
 export const Header = () => {
 
     const { user, itemCount, setItemCount } = useContext(AuthContext);
+    console.log(user)
 
     return (
         <div className="header-nav">
