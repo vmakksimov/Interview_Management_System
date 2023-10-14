@@ -180,40 +180,40 @@ export const Register = () => {
         const last_name = formData.get('last_name')
         const password2 = formData.get('re_password')
 
-        let url = 'http://127.0.0.1:8000/api/register/';
-        axios.defaults.withCredentials = true
-        axios.post(url, { username, email, first_name, last_name, password, password2 }, {
-            withCredentials: true,
-            // crossDomain: true,
-            headers: {
-                // "X-CSRFToken": axios.get('accessToken'),
-                'Access-Control-Allow-Origin': '*',
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(res => {
-                console.log(res)
-                userLogin(res.data)
-                navigate('/')
-            })
-            .catch(err => console.log(err))
-
-
-        // AuthService.register(username, email, first_name, last_name, password, password2)
+        // let url = 'http://127.0.0.1:8000/api/register/';
+        // axios.defaults.withCredentials = true
+        // axios.post(url, { username, email, first_name, last_name, password, password2 }, {
+        //     withCredentials: true,
+        //     // crossDomain: true,
+        //     headers: {
+        //         // "X-CSRFToken": axios.get('accessToken'),
+        //         'Access-Control-Allow-Origin': '*',
+        //         'Content-Type': 'application/json'
+        //     }
+        // })
         //     .then(res => {
-        //         login(username, password)
-        //             .then(res => {
-        //                 userLogin(res)
-        //                 navigate('/')
-
-        //             })
-        //     })
-
-        //     .catch((error) => {
-        //         console.log('some error')
-        //         console.log(error)
+        //         console.log(res)
+        //         userLogin(res.data)
         //         navigate('/')
         //     })
+        //     .catch(err => console.log(err))
+
+
+        AuthService.register(username, email, first_name, last_name, password, password2)
+            .then(res => {
+                login(username, password)
+                    .then(res => {
+                        userLogin(res)
+                        navigate('/')
+
+                    })
+            })
+
+            .catch((error) => {
+                console.log('some error')
+                console.log(error)
+                navigate('/')
+            })
     }
 
     return (

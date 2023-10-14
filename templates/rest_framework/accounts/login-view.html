@@ -17,6 +17,7 @@
     <form class="form-horizontal" action="{% url 'login' %}" method="post" novalidate>
         {% csrf_token %}
 {#        {% render_form serializer %}#}
+        {{ form }}
         <div class="user-details">
             <input type='text' name="username" placeholder='username'>
         </div>

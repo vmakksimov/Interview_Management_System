@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 from corsheaders.defaults import default_headers
 
@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'Interview_Management_System.api_users',
     'Interview_Management_System.interview',
     'rest_framework_simplejwt',
+    'celery',
+# 'kombu.transport.django',
 
 ]
 
@@ -116,6 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
+        # 'rest_framework.permissions.IsAuthenticated',
     ],
     # 'DEFAULT_FILTER_BACKENDS': [
     #     'django_filters.rest_framework.DjangoFilterBackend'
@@ -135,13 +138,13 @@ REST_FRAMEWORK = {
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
-CSRF_COOKIE_HTTPONLY = False
-CSRF_COOKIE_SECURE = True
-CSRF_COOKIE_SAMESITE = 'None'
-
-SESSION_COOKIE_HTTPONLY = False
-SESSION_COOKIE_SECURE = True
-SESSION_COOKIE_SAMESITE = 'None'
+# CSRF_COOKIE_HTTP_ONLY = False
+# CSRF_COOKIE_SECURE = True
+# CSRF_COOKIE_SAMESITE = 'Lax'
+#
+# SESSION_COOKIE_HTTPONLY = False
+# SESSION_COOKIE_SECURE = True
+# SESSION_COOKIE_SAMESITE = 'Lax'
 
 CORS_EXPOSE_HEADERS = [
   "Content-Type",
@@ -225,10 +228,17 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     BASE_DIR / 'staticfiles',
 )
+BROKER_URL = os.environ.get('RABBITMQ_URL', 'amqp://guest:guest@localhost:5672/')
+# broker_connection_retry_on_startup = True
+# CELERY_BROKER_URL = ('RABBITMQ_URL', 'amqp://guest:guest@localhost:5672/')
+# CELERY_RESULT_BACKEND= "celery.backends.database:DatabaseBackend"
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER = 'json'
 
 # AUTH_USER_MODEL = 'api_users.CustomUser'
 
-LOGIN_REDIRECT_URL = 'Interview_Management_System:index'
+# LOGIN_REDIRECT_URL = 'Interview_Management_System:index'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

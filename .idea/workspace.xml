@@ -3,29 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="b71b45b8-36df-4bec-8115-ac1b3bebe640" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae8e5722-1f5e-487f-9e9a-ec2dcbb4e32a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae8e5722-1f5e-487f-9e9a-ec2dcbb4e32a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/ae8e5722-1f5e-487f-9e9a-ec2dcbb4e32a/storage_v2/_src_/database/interview_db._KPBrw/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/ae8e5722-1f5e-487f-9e9a-ec2dcbb4e32a/storage_v2/_src_/database/interview_db._KPBrw/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/migrations/0002_auto_20231011_1740.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0003_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/migrations/0003_delete_interview.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0002_delete_interview.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Interview_Management_System/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0002_remove_interview_date_for_interview.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0003_interview_candidate_first_name_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/interview/migrations/0004_interview_status.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Interview_Management_System/interview/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/interview/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interview_Management_System/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interview_Management_System/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Logout/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Logout/Logout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/MyInterviews/Interview/Interview.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/MyInterviews/Interview/Interview.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Register/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Register/Register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/services/requester.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/services/requester.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/rest_framework/accounts/login-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/rest_framework/accounts/login-view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,26 +38,29 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2WZeelUA1dV3WZ0zVhMrkZjPJL4" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Python/Interview_Management_System"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Python/Interview_Management_System&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Python\Interview_Management_System\staticfiles" />
@@ -114,7 +106,8 @@
       <updated>1696944626973</updated>
       <workItem from="1696944631154" duration="18965000" />
       <workItem from="1697025365472" duration="1894000" />
-      <workItem from="1697027488168" duration="51588000" />
+      <workItem from="1697027488168" duration="75328000" />
+      <workItem from="1697249174982" duration="1060000" />
     </task>
     <servers />
   </component>
@@ -133,6 +126,25 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Interview_Management_System/api_users/views.py</url>
+          <line>132</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Interview_Management_System/interview/views.py</url>
+          <line>46</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Interview_Management_System/api_users/views.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="serializer.default" />

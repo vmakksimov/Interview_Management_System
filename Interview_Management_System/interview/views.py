@@ -7,6 +7,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import generics, status
+from django.views import generic as views
 
 from Interview_Management_System.interview.models import Interview
 from Interview_Management_System.interview.serializers import InterviewSerializer
@@ -31,7 +32,7 @@ class CreateInterviewView(APIView):
             return Response({'error': serializer_class.errors}, status=400)
 
 
-class InterviewUpdateView (APIView):
+class InterviewUpdateView (generics.UpdateAPIView):
     queryset = Interview.objects.all()
     serializer_class = InterviewSerializer
     # authentication_classes = [SessionAuthentication, BasicAuthentication]
@@ -42,7 +43,6 @@ class InterviewUpdateView (APIView):
         serializer = InterviewSerializer(interview)
         return Response(serializer.data)
 
-
     def delete(self, request, pk):
         interview = Interview.objects.get(id=pk)
         interview.delete()
@@ -51,3 +51,12 @@ class InterviewUpdateView (APIView):
 class InterviewList(generics.ListAPIView):
     queryset = Interview.objects.all()
     serializer_class = InterviewSerializer
+
+
+
+
+    # def get_context_data(self, **kwargs):
+    #     context = super().get_context_data(**kwargs)
+    #     context['hide_context'] = True
+    #
+    #     return context
