@@ -1,15 +1,15 @@
 from django.urls import path
-from Interview_Management_System.api_users.views import UserViewSet, LogOutAPIView, LoginAPIView, RegisterView, \
-    UsersViewAPI, HomeView
+from Interview_Management_System.api_users.views import UserViewSet, RegisterView, BlacklistTokenUpdateView
 
 urlpatterns = (
-    path('', HomeView.as_view(template_name='base.html'), name='home'),
+
     path('users-view/', UserViewSet.as_view({'get': 'list'}), name='users view'),
     # path('register/',  RegisterUserAPIView.as_view(), name='register'),
-    path('login/', LoginAPIView.as_view(), name='login'),
+    # path('login/', LoginAPIView.as_view(), name='login'),
     path('register/', RegisterView.as_view(), name='auth_register'),
-    path('logout/', LogOutAPIView.as_view(), name='auth_logout'),
-    path('user/', UsersViewAPI.as_view(), name='user_view'),
+    # path('logout/', LogOutAPIView.as_view(), name='auth_logout'),
+    # path('user/', UsersViewAPI.as_view(), name='user_view'),
+    path('logout/blacklist/', BlacklistTokenUpdateView.as_view(),name='blacklist')
 
     # path('api-token-auth/', LoginAPIView.as_view()),
 

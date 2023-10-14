@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     "corsheaders",
     'Interview_Management_System.api_users',
     'Interview_Management_System.interview',
-    'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
     'celery',
 # 'kombu.transport.django',
 
