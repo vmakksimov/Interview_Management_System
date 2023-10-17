@@ -3,13 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b71b45b8-36df-4bec-8115-ac1b3bebe640" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/api_users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/api_users/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/interview/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/interview/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/interview/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/interview/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interview_Management_System/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Interview_Management_System/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +41,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Python/django_p"
+    "last_opened_file_path": "C:/Python/nosql_api3"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -102,7 +95,7 @@
       <workItem from="1696944631154" duration="18965000" />
       <workItem from="1697025365472" duration="1894000" />
       <workItem from="1697027488168" duration="75328000" />
-      <workItem from="1697249174982" duration="7159000" />
+      <workItem from="1697249174982" duration="24555000" />
     </task>
     <servers />
   </component>
@@ -121,6 +114,15 @@
     </option>
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Interview_Management_System/api_users/views.py</url>
+          <line>13</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="Python.DjangoServer">
         <watch expression="serializer.default" />
